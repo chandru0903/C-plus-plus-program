@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std;
+int main(){
+int n1,n2;
+cout<<"Enter two integer :";
+cin>>n1>>n2;
+if(n1==n2){
+cout<<"Equal";}
+else{cout<<"not equal";}
+}
