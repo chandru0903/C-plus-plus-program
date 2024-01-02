@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int n1,n2;
+cout<<"Enter two positive number :";
+cin>>n1>>n2;
+do{
+if(n1>n2){
+n1-=n2;}
+else{n2-=n1;}}
+  while(n1!=n2)
+  cout<<"GCD"<<n1;
+}
