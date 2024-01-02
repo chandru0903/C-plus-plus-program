@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main(){
+int n,sum=0;
+cout<<n;
+for(int i=1;i<=n;i++){
+int a=n%10;
+sum+=a;
+n/=10;}
+if(sum==n){
+cout<<"Its palaindrome number";}
+else{count<<"Its not a palindrome number";}}
