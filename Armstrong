@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main(){
+int a,arm=0,i;
+cout<<"Enter the number to chek :";
+cin>>a;
+int temp=a;
+while(temp!=0){
+int n=temp%10;
+arm+=n*n*n;
+temp/=10;}
+if(a==arm){
+cou<<"Given number is armstrong number ";}
+else{cout<<"Given numbers is not a armstrong";}}
