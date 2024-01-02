@@ -1,0 +1,9 @@
+#include<iostream>
+using namespace std;
+int main(){
+int n,fact,i;
+cout<<"Enter the number :";
+cin>>n;
+fact=1;
+for(i=1;i<=n;i++){fact*=i;}
+cout<<"Factorial of given number is :"<<fact;}
