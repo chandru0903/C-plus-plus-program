@@ -1,0 +1,17 @@
+#include <algorithm> 
+#include<iostream>
+#include<string>
+using namespace std; 
+int str(string a) 
+{ 
+     
+    reverse(a.begin(), a.end()); 
+	cout<<"\n"<<a; 
+   
+}
+int main(){
+    string a ;
+    cout<<"Enter string without space : \n";
+    cin>>a;
+    str(a);
+}
