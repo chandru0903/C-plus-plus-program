@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+// Base class
+class shape {
+public:
+    virtual int performOperation(int num1, int num2) = 0;
+};
+
+// Derived class for addition
+class Triangle : public shape {
+public:
+    int performOperation(int num1, int num2) override {
+        return (num1*num2)/2;
+    }
+};
+
+// Derived class for subtraction
+class Rectangle : public shape {
+public:
+    int performOperation(int num1, int num2) override {
+        return num1*num2;
+    }
+};
+
+int main() {
+    int num1, num2;
+     // Creating objects of the derived classes
+    Triangle t;
+    Rectangle r;
+    cout << "Enter the X of Triagnle : ";
+    cin >> num1;
+    cout << "Enter the Y of Triangle : ";
+    cin >> num2;
+    int sum = t.performOperation(num1, num2);
+    cout << "The area of the Triangle is : " << sum << endl;
+    // Using the adder object to perform addition
+    cout << "Enter the X of Rectangle : ";
+    cin >> num1;
+    cout << "Enter the Y of Rectangle : ";
+    cin >> num2;
+
+    // Using the subtractor object to perform subtraction
+    int difference = r.performOperation(num1, num2);
+    cout << "the area of the Rectangle is : " << difference << endl;
+
+    return 0;
+}
