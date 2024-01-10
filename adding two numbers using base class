@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+class base{
+    public:
+    void getinput(){
+        cout<<"Enter the first number : ";
+        cin>>a;
+        cout<<"Enter the second number : ";
+        cin>>b;
+    }
+    int geta() const{
+        return a;
+    }
+    int getb() const{
+        return b;
+    }
+private:
+    int a;
+    int b;
+};
+class addof:public base{
+    public:
+    void display(){
+        getinput();
+        int x=geta();
+        int y=getb();
+        cout<<"The addition of two number is : ";
+        cout<<x+y;
+    }
+};
+int main(){
+    addof c;
+    c.display();
+}
