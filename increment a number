@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int inc(int n){
+    n++;
+    cout<<"After the increment : "<<n;
+}
+int main(){
+    int n;
+    cout<<"Enter the number : ";
+    cin>>n;
+    inc(n);
+}
