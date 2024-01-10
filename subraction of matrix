@@ -1,0 +1,56 @@
+#include <iostream>
+
+int main() {
+    const int rows = 3;
+    const int cols = 3;
+
+    int matrixA[rows][cols];
+    int matrixB[rows][cols];
+    int result[rows][cols];
+    std::cout << "Enter elements for Matrix A:" << std::endl;
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            std::cout << "Enter element at position (" << i + 1 << ", " << j + 1 << "): ";
+            std::cin >> matrixA[i][j];
+        }
+    }
+    std::cout << "Enter elements for Matrix B:" << std::endl;
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            std::cout << "Enter element at position (" << i + 1 << ", " << j + 1 << "): ";
+            std::cin >> matrixB[i][j];
+        }
+    }
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            result[i][j] = matrixA[i][j] - matrixB[i][j];
+        }
+    }
+
+    // Display matrices
+    std::cout << "Matrix A:" << std::endl;
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            std::cout << matrixA[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    std::cout << "Matrix B:" << std::endl;
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            std::cout << matrixB[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    std::cout << "Resultant Matrix:" << std::endl;
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            std::cout << result[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
