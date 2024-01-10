@@ -1,0 +1,31 @@
+
+ #include<iostream>
+ using namespace std;
+int main(){
+int n,a,cou=0;
+cout << "Enter the number of elements :";
+cin>>n;
+int num[n];
+cout << "Enter the elements : ";
+for(int i=0;i<n;i++){
+cin>>num[i];}
+
+cout<<"Enter the target number : ";
+cin>>a;
+for(int i=0;i<n;i++){
+for(int j=0;j<n;j++){
+int s=num[i]+num[j];
+if(s == a){
+    cout << "The position is : " << i << " "<<j<<"\n";
+    cou++;
+    break;
+}
+}
+
+}
+if(cou==0){
+    cout<<"Cant find::";
+}
+
+return 0;
+}
