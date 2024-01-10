@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int dec(int n){
+    n--;
+    cout<<"After the decrement : "<<n;
+}
+int main(){
+    int n;
+    cout<<"Enter the number : ";
+    cin>>n;
+    dec(n);
+}
