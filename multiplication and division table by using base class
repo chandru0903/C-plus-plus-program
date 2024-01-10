@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+class animal{
+    public:
+    virtual int speak(int a, int b)=0;
+};
+class dog:public animal{
+    public:
+    int speak(int a, int b){
+        for(int i=1;i<=b;i++){
+            cout<<i<<"X"<<a<<"="<<a*i<<endl;
+        }
+    }
+};
+class cat:public animal{
+    public:
+    int speak(int a, int b){
+        for(int i=1;i<=b;i++){
+            float c=i/a;
+            cout<<i<<"/"<<a<<" "<<c<<endl;}
+        }
+};
+int main(){
+    dog d;
+    cat t;
+    int a,b,n;
+    cout<<"Enter the table : ";
+    cin>>a;
+    cout<<"Enter the range : ";
+    cin>>b;
+    cout<<"Enter the option (Option 1: mul , Option 2: div) : ";
+    cin>>n;
+    if(n==1){
+    d.speak(a,b);
+    }
+    else if(n==2){
+    t.speak(a,b);}
+    else{cout<<"Your entered a wrong input :: ";}
+}
