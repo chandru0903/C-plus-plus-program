@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+class Student {
+public:
+    std::string name;
+    std::string reg_no;
+    std::vector<float> marks;
+
+    void getdata() {
+        std::cout << "Enter student name: ";
+        std::getline(std::cin, name);
+
+        std::cout << "Enter registration number: ";
+        std::getline(std::cin, reg_no);
+
+        for (int i = 0; i < 5; ++i) {
+            float mark;
+            std::cout << "Enter mark " << i + 1 << ": ";
+            std::cin >> mark;
+            marks.push_back(mark);
+        }
+    }
+};
+
+// Function to calculate total marks
+float tot_marks(const Student& student) {
+    float total = 0;
+    for (float mark : student.marks) {
+        total += mark;
+    }
+    return total;
+}
+
+int main() {
+    // Create an instance of the Student class
+    Student student1;
+
+    // Get data for the student
+    student1.getdata();
+
+    // Calculate and print the total marks
+    float total_marks = tot_marks(student1);
+    std::cout << "Total marks for " << student1.name << " (Reg. No: " << student1.reg_no << "): " << total_marks << std::endl;
+
+    return 0;
+}
